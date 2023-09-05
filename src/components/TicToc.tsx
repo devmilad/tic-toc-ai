@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Board } from './Board'
-import {  computerMove, getCleverMove } from '../utils/ComputerMove'
+import {  getCleverMove } from '../utils/ComputerMove'
 import { checkWinner } from '../utils/Winner'
 
 export type BoardArray = Array<Array<string | null>>
