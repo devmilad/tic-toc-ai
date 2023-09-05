@@ -30,6 +30,7 @@ export const getCleverMove = (board:BoardArray, player:string, chackWinner: (boa
         row.map((col, colIndex) => {
             if (!board[rowIndex][colIndex]) {
                 const clonedBoard = board.map(r => [...r])
+                col?.at
                 clonedBoard[rowIndex][colIndex] = player
                 if (chackWinner(clonedBoard) === player) {
                     cleverMoves.unshift([rowIndex, colIndex])
@@ -44,6 +45,7 @@ export const getCleverMove = (board:BoardArray, player:string, chackWinner: (boa
         row.some((col, colIndex) => {
             if (!board[rowIndex][colIndex]) {
                 const clonedBoard = board.map(r => [...r])
+                col?.at
                 clonedBoard[rowIndex][colIndex] = opponent
                 if (chackWinner(clonedBoard) === opponent) {
                     cleverMoves.push([rowIndex, colIndex])
